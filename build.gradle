@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.7.2'
+
+}
+
+test {
+    useTestNG()
+}
